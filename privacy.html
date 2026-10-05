@@ -91,13 +91,14 @@ check for driving, as described below. On Android a notification shows the whole
 during a trip, the app also sets a geofence about 1 km (0.6 mi) around the
 truck&#39;s last position so iPhone can restart recording if the app was closed.
 It is removed when the trip ends.</li>
-<li><strong>Trip detection (optional, off by default).</strong> In <strong>Settings › GPS Trips ›
-Trip Detection</strong> you can choose Manual (the default: you start every trip),
-Ask me (the app asks &quot;Driving detected. Start a trip?&quot;) or Automatic (trips
-start and end by themselves). Ask me and Automatic need location &quot;Always&quot;,
-motion activity access (Motion &amp; Fitness on iPhone, Physical activity on
-Android) and notifications; the app asks for them only when you choose one of
-these options, after explaining why. With detection on:<ul>
+<li><strong>Trip detection (optional, off by default).</strong> In <strong>Settings › GPS
+Auto-Tracking</strong>, the <strong>Auto-detect trips</strong> switch is off by default (you
+start every trip). Turned on, you choose &quot;Ask me before starting&quot; (the app
+asks &quot;Driving detected. Start a trip?&quot;) or &quot;Start automatically&quot; (trips start
+and end by themselves). It needs location &quot;Always&quot;, motion activity access
+(Motion &amp; Fitness on iPhone, Physical activity on Android) and, for &quot;Ask me&quot;,
+notifications; the app asks for them only when you turn it on, after
+explaining why. With detection on:<ul>
 <li>On iPhone, the system wakes the app when you have moved a significant
 distance (based on cell towers and Wi-Fi, roughly every 500 m). The app
 reads only the time and speed from these wake-ups and discards the rest,
