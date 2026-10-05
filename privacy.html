@@ -42,8 +42,10 @@ it is kept, and the choices you have. If anything is unclear, email us at
 <ul>
 <li>We collect what is needed to keep your mileage and fuel log, sync it, and
 calculate your IFTA fuel tax.</li>
-<li>GPS location is recorded only while a trip that you started is running. Your
-detailed route stays on your phone.</li>
+<li>GPS location is recorded only while a trip is running. If you turn on
+optional trip detection, the app also checks for driving in the background,
+but nothing from those checks is stored or sent. Your detailed route stays on
+your phone.</li>
 <li>When you choose to scan a receipt, the photo is sent to Anthropic&#39;s AI to read
 it. Anthropic does not use it to train its models.</li>
 <li>We do not sell your data, show ads, or use analytics, advertising or tracking
@@ -78,15 +80,43 @@ license plate and plate state, fuel type.</li>
 </ul>
 <h2>3. Location and GPS trips</h2>
 <ul>
-<li><strong>Only during a trip you start.</strong> AxleLog records your location only while a
-GPS trip you started is running. Recording stops when you end the trip. You
-never have to use GPS: you can enter miles by hand.</li>
+<li><strong>Only during a trip.</strong> AxleLog records your location only while a GPS trip
+is running: one you started, or, if you turned on trip detection, one you
+accepted or that started automatically. Recording stops when the trip ends.
+You never have to use GPS: you can enter miles by hand.</li>
 <li><strong>Background location.</strong> If you allow location &quot;Always&quot;, the app keeps
 recording while it is in the background or the screen is off, but only while
-a trip is running. On Android a notification shows the whole time. On iPhone,
+a trip is running. If you turn on trip detection, &quot;Always&quot; is also used to
+check for driving, as described below. On Android a notification shows the whole time. On iPhone,
 during a trip, the app also sets a geofence about 1 km (0.6 mi) around the
 truck&#39;s last position so iPhone can restart recording if the app was closed.
 It is removed when the trip ends.</li>
+<li><strong>Trip detection (optional, off by default).</strong> In <strong>Settings › GPS Trips ›
+Trip Detection</strong> you can choose Manual (the default: you start every trip),
+Ask me (the app asks &quot;Driving detected. Start a trip?&quot;) or Automatic (trips
+start and end by themselves). Ask me and Automatic need location &quot;Always&quot;,
+motion activity access (Motion &amp; Fitness on iPhone, Physical activity on
+Android) and notifications; the app asks for them only when you choose one of
+these options, after explaining why. With detection on:<ul>
+<li>On iPhone, the system wakes the app when you have moved a significant
+distance (based on cell towers and Wi-Fi, roughly every 500 m). The app
+reads only the time and speed from these wake-ups and discards the rest,
+and asks the phone&#39;s motion chip whether you seem to be in a vehicle. On
+Android, Google Play services on your phone tells the app when you get into
+or out of a vehicle. No location is used for that.</li>
+<li>When those signals suggest driving, the app turns on GPS for a few minutes
+to check your speed (over about 15 mph). iPhone shows the location
+indicator and Android shows a notification while it does.</li>
+<li>These readings are kept only in the app&#39;s memory. If a trip starts on that
+drive, they become the first miles of the trip. Otherwise they are thrown
+away when the drive ends. They are never stored or sent to us.</li>
+<li><strong>Automatic trips wait for you.</strong> A trip that started automatically stays
+on your phone until you confirm it. It isn&#39;t synced, isn&#39;t in your log or
+reports, and your fleet can&#39;t see it until then. If you discard it, it is
+deleted from your phone.</li>
+<li>Switch back to Manual at any time. Signing out turns detection off.</li>
+</ul>
+</li>
 <li><strong>Worked out on your phone.</strong> The app works out which state or province you
 are in on your phone, using boundary maps built into the app. Your
 coordinates are not sent to us or to any location service for this.</li>
@@ -165,8 +195,8 @@ see your email address or your detailed GPS routes.</li>
 </tr>
 <tr>
 <td><strong>Google</strong></td>
-<td>Google sign-in, if you use it</td>
-<td>What you share with Google to sign in</td>
+<td>Google sign-in, if you use it; on Android, Google Play services detects driving for trip detection, if you turn it on</td>
+<td>What you share with Google to sign in. Activity recognition runs in Google Play services on your phone.</td>
 </tr>
 <tr>
 <td><strong>Apple</strong></td>
@@ -249,6 +279,9 @@ exports you have saved or sent elsewhere.</p>
 <li><strong>Location</strong>: you can refuse location access, allow it only while using the
 app, or turn it off at any time in your phone&#39;s settings. You can always enter
 miles by hand.</li>
+<li><strong>Trip detection</strong> is off unless you turn it on. Switch it back to Manual in
+Settings at any time, or turn off location &quot;Always&quot; or motion access in your
+phone&#39;s settings.</li>
 <li><strong>Receipt scanning</strong> is optional.</li>
 <li><strong>Access and correction</strong>: you can see and edit your data in the app and
 export it. You can also email us to ask for a copy, a correction or deletion.
