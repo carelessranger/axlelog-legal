@@ -95,10 +95,12 @@ It is removed when the trip ends.</li>
 Auto-Tracking</strong>, the <strong>Auto-detect trips</strong> switch is off by default (you
 start every trip). Turned on, you choose &quot;Ask me before starting&quot; (the app
 asks &quot;Driving detected. Start a trip?&quot;) or &quot;Start automatically&quot; (trips start
-and end by themselves). It needs location &quot;Always&quot;, motion activity access
-(Motion &amp; Fitness on iPhone, Physical activity on Android) and, for &quot;Ask me&quot;,
-notifications; the app asks for them only when you turn it on, after
-explaining why. With detection on:<ul>
+and end by themselves). To work while the app is closed, it needs location
+&quot;Always&quot;, motion activity access (Motion &amp; Fitness on iPhone, Physical
+activity on Android) and, for &quot;Ask me&quot;, notifications; the app asks for them
+only when you turn it on, after explaining why. Without them, &quot;Ask me&quot; still
+works while Crossmile is open on your screen, and &quot;Start automatically&quot;
+becomes &quot;Ask me&quot;. With detection on:<ul>
 <li>On iPhone, the system wakes the app when you have moved a significant
 distance (based on cell towers and Wi-Fi, roughly every 500 m). The app
 reads only the time and speed from these wake-ups and discards the rest,
@@ -108,6 +110,9 @@ or out of a vehicle. No location is used for that.</li>
 <li>When those signals suggest driving, the app turns on GPS for a few minutes
 to check your speed (over about 15 mph). iPhone shows the location
 indicator and Android shows a notification while it does.</li>
+<li>Without &quot;Always&quot; (see above), the app instead checks your GPS speed only
+while Crossmile is open on your screen, and asks &quot;Driving detected. Start
+a trip?&quot; in the app. It stops as soon as you leave the app.</li>
 <li>These readings are kept only in the app&#39;s memory. If a trip starts on that
 drive, they become the first miles of the trip. Otherwise they are thrown
 away when the drive ends. They are never stored or sent to us.</li>
@@ -128,6 +133,10 @@ never uploaded. You can delete stored routes at any time in
 province, odometer readings you enter, GPS miles, the number and length of
 gaps in recording, the tracking mode, notes, and the truck and trailer) and
 the miles driven in each state or province per day.</li>
+<li><strong>Where you are now.</strong> If you allow location access, the home screen shows
+the state or province you are in and, on iPhone, a small map of the area
+around you. Your position is read when you open that screen; it is not
+stored or sent to us.</li>
 <li><strong>Filling in the state.</strong> When you add an entry or scan a receipt, and you
 have already allowed location access, the app may use your current trip or
 the phone&#39;s last known location to suggest the state or province. This
@@ -137,8 +146,8 @@ whether a trip is running, its miles and the current state or province.
 During a trip, the lock screen and Dynamic Island show the same. Anyone who
 can see your phone&#39;s screen can see them. This information stays on your
 phone.</li>
-<li><strong>Maps.</strong> On iPhone, trip routes are shown on Apple Maps, which loads map
-images from Apple for the area on screen. On Android the app draws the route
+<li><strong>Maps.</strong> On iPhone, trip routes and the home screen&#39;s map are shown on
+Apple Maps, which loads map images from Apple for the area on screen. On Android the app draws the route
 itself without a map service.</li>
 </ul>
 <h2>4. Receipt photos and AI receipt scanning</h2>
