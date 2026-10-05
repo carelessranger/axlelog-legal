@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AxleLog Privacy Policy</title>
+<meta name="description" content="How AxleLog, by Crafted Chaos Labs, collects, uses and protects your data.">
+<style>
+  :root {
+    --bg: #ffffff; --text: #1e293b; --muted: #475569; --border: #e2e8f0;
+    --accent: #c2410c; --surface: #f8fafc;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0f172a; --text: #e2e8f0; --muted: #94a3b8; --border: #334155;
+            --accent: #fb923c; --surface: #1e293b; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; }
+  h2 { font-size: 1.3rem; margin: 2.2em 0 0.4em; padding-top: 0.6em; border-top: 1px solid var(--border); }
+  ul { padding-left: 1.3em; }
+  li { margin: 0.35em 0; }
+  a { color: var(--accent); overflow-wrap: anywhere; }
+  .table-wrap { overflow-x: auto; margin: 1em 0; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+  th, td { text-align: left; vertical-align: top; padding: 10px; border: 1px solid var(--border); }
+  th { background: var(--surface); }
+  footer { margin-top: 48px; color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<main>
+<h1>AxleLog Privacy Policy</h1>
+<p><strong>Effective date: October 5, 2026</strong></p>
+<p>AxleLog is an IFTA fuel tax and mileage app made by Crafted Chaos Labs (&quot;we&quot;,
+&quot;us&quot;). This policy explains what the app collects, why, where it goes, how long
+it is kept, and the choices you have. If anything is unclear, email us at
+<a href="mailto:craftedchaoslabs@gmail.com">craftedchaoslabs@gmail.com</a>.</p>
+<h2>The short version</h2>
+<ul>
+<li>We collect what is needed to keep your mileage and fuel log, sync it, and
+calculate your IFTA fuel tax.</li>
+<li>GPS location is recorded only while a trip that you started is running. Your
+detailed route stays on your phone.</li>
+<li>When you choose to scan a receipt, the photo is sent to Anthropic&#39;s AI to read
+it. Anthropic does not use it to train its models.</li>
+<li>We do not sell your data, show ads, or use analytics, advertising or tracking
+tools.</li>
+<li>You can delete your account at any time in the app.</li>
+</ul>
+<h2>1. Your account</h2>
+<p>When you create an account we collect:</p>
+<ul>
+<li><strong>Email and password.</strong> Your password is handled by our sign-in provider,
+Supabase, which stores only a scrambled (hashed) version. We never see it.</li>
+<li><strong>Your name</strong>, if you enter one.</li>
+<li><strong>Google or Apple sign-in.</strong> If you sign in with Google or Apple, we receive
+your name and email address from them (Apple may give us a private relay
+address instead). For Apple sign-in we also store a token from Apple so that
+we can tell Apple to disconnect AxleLog if you delete your account.</li>
+<li><strong>Your business or fleet</strong>: its name, your role (owner, manager or driver),
+and invite codes that owners and managers create.</li>
+</ul>
+<p>We send you emails with verification and password reset codes. We do not send
+marketing email.</p>
+<h2>2. Your log</h2>
+<p>The app stores what you enter:</p>
+<ul>
+<li><strong>Entries</strong>: date, state or province, miles or kilometers, fuel quantity,
+fuel type, cost, price per unit, currency, station or vendor name, tolls,
+repairs, washes, notes, truck number, and whether fuel was for a reefer or
+had tax paid at the pump.</li>
+<li><strong>Trucks and trailers</strong>: unit number, nickname, make, model, year, VIN,
+license plate and plate state, fuel type.</li>
+<li><strong>Tax rates</strong> you enter by hand to override the published IFTA rates.</li>
+</ul>
+<h2>3. Location and GPS trips</h2>
+<ul>
+<li><strong>Only during a trip you start.</strong> AxleLog records your location only while a
+GPS trip you started is running. Recording stops when you end the trip. You
+never have to use GPS: you can enter miles by hand.</li>
+<li><strong>Background location.</strong> If you allow location &quot;Always&quot;, the app keeps
+recording while it is in the background or the screen is off, but only while
+a trip is running. On Android a notification shows the whole time. On iPhone,
+during a trip, the app also sets a geofence about 1 km (0.6 mi) around the
+truck&#39;s last position so iPhone can restart recording if the app was closed.
+It is removed when the trip ends.</li>
+<li><strong>Worked out on your phone.</strong> The app works out which state or province you
+are in on your phone, using boundary maps built into the app. Your
+coordinates are not sent to us or to any location service for this.</li>
+<li><strong>Your route stays on your phone.</strong> The detailed route (the GPS points) is
+never uploaded. You can delete stored routes at any time in
+<strong>Settings › Privacy</strong>; deleting the app deletes them too.</li>
+<li><strong>What is synced</strong>: a trip summary (start and end time, start and end state or
+province, odometer readings you enter, GPS miles, the number and length of
+gaps in recording, the tracking mode, notes, and the truck and trailer) and
+the miles driven in each state or province per day.</li>
+<li><strong>Filling in the state.</strong> When you add an entry or scan a receipt, and you
+have already allowed location access, the app may use your current trip or
+the phone&#39;s last known location to suggest the state or province. This
+happens on your phone and never asks for permission by itself.</li>
+<li><strong>Maps.</strong> On iPhone, trip routes are shown on Apple Maps, which loads map
+images from Apple for the area on screen. On Android the app draws the route
+itself without a map service.</li>
+</ul>
+<h2>4. Receipt photos and AI receipt scanning</h2>
+<ul>
+<li><strong>Photos you add</strong> are saved in the app on your phone. When your log syncs,
+they are uploaded to private cloud storage so they are backed up and
+available on your other devices (and to your fleet&#39;s owner and managers, see
+section 5).</li>
+<li><strong>Scanning is optional.</strong> When you tap Scan, a smaller copy of the photo
+(about 1600 pixels on the longest side) is sent over an encrypted connection,
+through our server, to Anthropic&#39;s Claude API. Claude reads the printed
+details (such as date, station, location, quantity, price, total and fuel
+type) and sends them back for you to check before you save. Photos you don&#39;t
+scan are never sent to Anthropic.</li>
+<li><strong>What our server keeps.</strong> Our server does not save the photo or what Claude
+read from it. It records that a scan happened (when, and whether it worked) to
+apply a daily scan limit.</li>
+<li><strong>What Anthropic does with it.</strong> Anthropic&#39;s
+<a rel="noopener" href="https://www.anthropic.com/legal/commercial-terms">Commercial Terms</a> state
+that &quot;Anthropic may not train models on Customer Content from Services,&quot; and
+its privacy center says that by default it does
+<a rel="noopener" href="https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training">not use inputs or outputs from its API to train its models</a>.
+Anthropic
+<a rel="noopener" href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data">deletes API inputs and outputs within 30 days</a>,
+unless it needs to keep them longer to enforce its Usage Policy or to comply
+with the law.</li>
+</ul>
+<h2>5. Fleets: who can see your data</h2>
+<ul>
+<li><strong>Solo owner-operators</strong>: only you can see your log.</li>
+<li><strong>In a fleet</strong>: the fleet&#39;s owner and managers can see every member&#39;s entries,
+trip summaries, receipt photos, trucks and trailers, and the members&#39; names,
+roles and join dates. Drivers see only their own log. Nobody in the fleet can
+see your email address or your detailed GPS routes.</li>
+</ul>
+<h2>6. Who processes your data</h2>
+<p>We use a small number of service providers:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>What for</th>
+<th>What they receive</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Supabase</strong></td>
+<td>Sign-in, database, photo storage, our server functions</td>
+<td>Your account and everything you sync. Stored on servers in the United States (Oregon).</td>
+</tr>
+<tr>
+<td><strong>Anthropic</strong></td>
+<td>Reading receipts</td>
+<td>Only the photos you scan</td>
+</tr>
+<tr>
+<td><strong>Google</strong></td>
+<td>Google sign-in, if you use it</td>
+<td>What you share with Google to sign in</td>
+</tr>
+<tr>
+<td><strong>Apple</strong></td>
+<td>Apple sign-in, if you use it; Apple Maps on iPhone</td>
+<td>What you share with Apple to sign in; the map area shown</td>
+</tr>
+<tr>
+<td><strong>Expo (EAS)</strong></td>
+<td>Building the app</td>
+<td>Nothing about you. The app does not send your data to Expo.</td>
+</tr>
+</tbody></table></div>
+<p>You download AxleLog from the App Store or Google Play, which handle downloads
+under their own privacy policies.</p>
+<p><strong>We do not sell your personal information, share it for advertising, or show
+ads.</strong> The app contains no analytics, advertising or crash-reporting tools.</p>
+<h2>7. Diagnostics and logs</h2>
+<ul>
+<li>The app does not collect crash reports or usage analytics itself. If you have
+allowed it in your phone&#39;s settings, Apple or Google may share crash reports
+with us. They don&#39;t include your log.</li>
+<li>Our providers keep standard technical logs (such as IP address, time and the
+kind of request) for a limited time for security and troubleshooting. Our
+server functions log errors, which may include your account ID but never your
+receipt photos or their contents.</li>
+</ul>
+<h2>8. How we use your data</h2>
+<p>We use your data only to:</p>
+<ul>
+<li>run the app: keep your log, sync it between devices, calculate IFTA, build
+reports and exports, and read receipts you scan;</li>
+<li>keep accounts secure, send sign-in codes, and prevent abuse (such as the
+daily scan limit);</li>
+<li>answer your emails.</li>
+</ul>
+<p>We do not use your data for advertising or profiling, and we do not use it to
+train AI models.</p>
+<h2>9. Feedback and exports</h2>
+<ul>
+<li><strong>Send Feedback</strong> opens your email app with the app version, build number,
+platform and OS version filled in. You see everything before you send it.
+When you email us we receive your email address and what you write.</li>
+<li><strong>Exports and backups</strong> you make are created on your phone. Where you send
+them is up to you.</li>
+</ul>
+<h2>10. How long we keep data</h2>
+<ul>
+<li><strong>Your account and log</strong>: as long as you have an account.</li>
+<li><strong>Things you delete</strong> (entries, trips, trucks, trailers) disappear from the
+app right away. In our database they are marked as deleted, so the deletion
+reaches your other devices, and they are removed for good when your account,
+or for owners the fleet, is deleted.</li>
+<li><strong>Scan records</strong> (time and result): until your account is deleted.</li>
+<li><strong>Photos sent to Anthropic</strong>: up to 30 days at Anthropic, as described in
+section 4.</li>
+<li><strong>Technical logs</strong>: for the limited time our providers keep them.</li>
+</ul>
+<h2>11. Deleting your account</h2>
+<p>Delete your account in the app: <strong>Settings › Account › Delete My Account</strong>. You
+can also email us and we will do it for you.</p>
+<ul>
+<li><strong>Owners, including solo owner-operators</strong>: your business or fleet is deleted
+with all of its entries, trip summaries, tax rates, invite codes and receipt
+photos, along with your trucks, trailers, scan records and sign-in. You type
+the fleet name to confirm.</li>
+<li><strong>Drivers and managers in someone else&#39;s fleet</strong>: your sign-in, name, trucks,
+trailers and scan records are deleted. Entries, trip summaries and receipt
+photos you added stay with the fleet, because they are part of the fleet&#39;s
+tax records, but they are no longer linked to you. To have them removed, ask
+the fleet owner or email us.</li>
+<li><strong>Apple sign-in</strong>: we tell Apple to disconnect AxleLog.</li>
+</ul>
+<p><strong>Data on your phone.</strong> Signing out or deleting your account removes your
+account&#39;s data from that phone. Entries made before you signed in, which were
+never part of an account, stay on the phone until you delete them or the app.
+Deleting the app removes everything it stored on the phone. We cannot delete
+exports you have saved or sent elsewhere.</p>
+<h2>12. Your choices and rights</h2>
+<ul>
+<li><strong>Location</strong>: you can refuse location access, allow it only while using the
+app, or turn it off at any time in your phone&#39;s settings. You can always enter
+miles by hand.</li>
+<li><strong>Receipt scanning</strong> is optional.</li>
+<li><strong>Access and correction</strong>: you can see and edit your data in the app and
+export it. You can also email us to ask for a copy, a correction or deletion.
+We will reply within 30 days.</li>
+<li><strong>California residents</strong> have the right to know what personal information we
+collect, to have it corrected or deleted, and not to be treated differently
+for using these rights. We do not sell or share personal information.</li>
+<li><strong>Canadian residents</strong> have the right to access and correct their personal
+information and to withdraw consent. Your data is stored and processed in the
+United States, where it may be accessible to authorities under US law. If you
+are not satisfied with our answer, you can contact the Office of the Privacy
+Commissioner of Canada or, in Quebec, the Commission d&#39;accès à l&#39;information.</li>
+</ul>
+<p>Crafted Chaos Labs is responsible for your personal information. Contact
+<a href="mailto:craftedchaoslabs@gmail.com">craftedchaoslabs@gmail.com</a> for any privacy
+question or request.</p>
+<h2>13. Security</h2>
+<ul>
+<li>All traffic between the app and our servers is encrypted (HTTPS).</li>
+<li>Your sign-in session is kept in your phone&#39;s secure storage (Keychain on
+iPhone, Keystore on Android).</li>
+<li>Server-side rules make sure each person can reach only their own data, and
+owners and managers only their own fleet&#39;s data.</li>
+<li>Receipt photos are kept in private storage and shown through short-lived
+links.</li>
+<li>The log stored in the app on your phone is protected by your phone&#39;s own
+lock and encryption, so use a screen lock.</li>
+</ul>
+<p>No system is perfectly secure. If a breach affects your personal information, we
+will notify you as the law requires.</p>
+<h2>14. Children</h2>
+<p>AxleLog is for commercial drivers and businesses. It is not meant for anyone
+under 16, and we do not knowingly collect personal information from children.
+If you believe a child has given us personal information, email us and we will
+delete it.</p>
+<h2>15. Changes to this policy</h2>
+<p>We will post any change on this page and update the effective date. If a change
+significantly affects how we use your data, we will also tell you by email or in
+the app before it takes effect.</p>
+<h2>16. Contact</h2>
+<p>Crafted Chaos Labs<br>Email: <a href="mailto:craftedchaoslabs@gmail.com">craftedchaoslabs@gmail.com</a></p>
+<footer>&copy; 2026 Crafted Chaos Labs</footer>
+</main>
+</body>
+</html>
