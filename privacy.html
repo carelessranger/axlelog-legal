@@ -120,6 +120,11 @@ away when the drive ends. They are never stored or sent to us.</li>
 on your phone until you confirm it. It isn&#39;t synced, isn&#39;t in your log or
 reports, and your fleet can&#39;t see it until then. If you discard it, it is
 deleted from your phone.</li>
+<li><strong>Diagnostics.</strong> To help you see why a drive did or didn&#39;t start a
+trip, the app keeps the last 20 detection events (times, speeds and the
+motion type, never locations) on your phone, shown in <strong>Settings › GPS
+Auto-Tracking › Diagnostics</strong>. They are never sent to us, and are
+deleted when you sign out or tap Clear Events.</li>
 <li>Switch back to Manual at any time. Signing out turns detection off.</li>
 </ul>
 </li>
@@ -146,6 +151,16 @@ whether a trip is running, its miles and the current state or province.
 During a trip, the lock screen and Dynamic Island show the same. Anyone who
 can see your phone&#39;s screen can see them. This information stays on your
 phone.</li>
+<li><strong>Trip destination (optional).</strong> You can give a trip a destination to see
+approximate miles left and an arrival estimate. What you type in the search
+is sent to Apple&#39;s map search on iPhone, or to your phone&#39;s built-in
+geocoder on Android (on most Android phones this is a Google service), to
+find the place; on iPhone, your current position may be sent with it so
+nearby places come first. The destination and your recent destinations are
+kept on your phone only: they are never synced or sent to us, and are
+deleted when you sign out. &quot;Open in Maps&quot; opens Apple Maps or Google Maps
+with the destination; what happens there is covered by their privacy
+policies.</li>
 <li><strong>Maps.</strong> On iPhone, trip routes and the home screen&#39;s map are shown on
 Apple Maps, which loads map images from Apple for the area on screen. On Android the app draws the route
 itself without a map service.</li>
@@ -210,13 +225,13 @@ see your email address or your detailed GPS routes.</li>
 </tr>
 <tr>
 <td><strong>Google</strong></td>
-<td>Google sign-in, if you use it; on Android, Google Play services detects driving for trip detection, if you turn it on</td>
-<td>What you share with Google to sign in. Activity recognition runs in Google Play services on your phone.</td>
+<td>Google sign-in, if you use it; on Android, Google Play services detects driving for trip detection, if you turn it on, and the phone&#39;s geocoder finds trip destinations</td>
+<td>What you share with Google to sign in. Activity recognition runs in Google Play services on your phone. A destination search: the text you typed.</td>
 </tr>
 <tr>
 <td><strong>Apple</strong></td>
-<td>Apple sign-in, if you use it; Apple Maps on iPhone</td>
-<td>What you share with Apple to sign in; the map area shown</td>
+<td>Apple sign-in, if you use it; Apple Maps on iPhone, including destination search</td>
+<td>What you share with Apple to sign in; the map area shown; a destination search: the text you typed and, to rank nearby places, your approximate position</td>
 </tr>
 <tr>
 <td><strong>Expo (EAS)</strong></td>
